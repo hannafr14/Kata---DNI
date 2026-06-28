@@ -1,0 +1,27 @@
+{
+  "name": "kata---dni",
+  "version": "1.0.0",
+  "description": "Web application for calculating the Spanish DNI letter with input validation and unit tests.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hannafr14/Kata---DNI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/hannafr14/Kata---DNI/issues"
+  },
+  "homepage": "https://github.com/hannafr14/Kata---DNI#readme",
+  "devDependencies": {
+    "vitest": "^4.1.9"
+  }
+}
