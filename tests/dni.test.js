@@ -29,4 +29,8 @@ describe("calculateDniLetter", () => {
     it("returns null when the value is not an integer", () => {
         expect(calculateDniLetter("12.5")).toBe(null);
     });
+
+    it("returns R when the number is 99999999", () => {
+        expect(calculateDniLetter("99999999")).toBe("R")
+    });
 });
