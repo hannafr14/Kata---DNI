@@ -9,4 +9,8 @@ describe("calculateDniLetter", () => {
     it("returns R when the number is 1", () => {
         expect(calculateDniLetter("1")).toBe("R");
     });
+
+    it("returns null when the number is lower than 0", () => {
+        expect(calculateDniLetter("-1")).toBe(null);
+    });
 });
