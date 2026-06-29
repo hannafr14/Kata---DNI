@@ -13,4 +13,8 @@ describe("calculateDniLetter", () => {
     it("returns null when the number is lower than 0", () => {
         expect(calculateDniLetter("-1")).toBe(null);
     });
+
+    it("returns null when the number is greater than 99999999", () => {
+        expect(calculateDniLetter("100000000")).toBe(null);
+    })
 });
