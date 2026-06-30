@@ -6,6 +6,7 @@ const finishedSection = document.querySelector("#finished-section");
 
 const startButton = document.querySelector("#start-button");
 const cancelButton = document.querySelector("#cancel-button");
+const newCalculationButton = document.querySelector("#new-calculation-button");
 
 const resultSection = document.querySelector("#result-section");
 
@@ -44,4 +45,12 @@ calculateButton.addEventListener("click", () => {
 
   calculatorSection.hidden = true;
   resultSection.hidden = false;
+});
+
+newCalculationButton.addEventListener("click", () => {
+  resultSection.hidden = true;
+  calculatorSection.hidden = false;
+
+  dniInput.value = "";
+  errorMessage.hidden = true;
 });
