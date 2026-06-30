@@ -12,6 +12,19 @@
             <p>Introduce un número de DNI para calcular su letra correspondiente.</p>
             <button id="start-button">Iniciar</button>
         </section>
+
+        <section id="calculator-section" hidden>
+            <h1>Introduce tu DNI</h1>
+            <p>8 dígitos, sin la letra.</p>
+
+            <label for="dni-input">Número</label>
+            <input id="dni-input" type="text" maxlength="8" placeholder="12345678">
+
+            <p id="error-message" hidden>Los datos introducidos no son válidos</p>
+
+            <button id="calculate-button">Calcular letra</button>
+            <button id="cancel-button">Cancelar proceso</button>
+        </section>
     </main>
     
     <script type="module" src="./src/main.js"></script>
