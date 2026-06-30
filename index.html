@@ -5,30 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DNI Calc</title>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="./src/styles/main.css">
 </head>
 <body>
     <main>
-        <section id="intro-section">
+        <section id="intro-section" class="screen intro-screen">
             <h1>Calculadora de la letra del DNI</h1>
-            <p>Introduce un número de DNI para calcular su letra correspondiente.</p>
-            <button id="start-button">Iniciar</button>
+            <p>Introduce un número de DNI para calcular su <br> letra correspondiente.</p>
+            <button id="start-button">
+                Iniciar
+                <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+            </button>
         </section>
 
-        <section id="calculator-section" hidden>
+        <section id="calculator-section" class="screen calculator-screen" hidden>
             <h1>Introduce tu DNI</h1>
             <p>8 dígitos, sin la letra.</p>
 
             <label for="dni-input">Número</label>
             <input id="dni-input" type="text" maxlength="8" placeholder="12345678">
 
-            <p id="error-message" hidden>Los datos introducidos no son válidos</p>
+            <p id="error-message" hidden>El dato introducido es incorrecto</p>
 
             <button id="calculate-button">Calcular letra</button>
             <button id="cancel-button">Cancelar proceso</button>
         </section>
 
-        <section id="result-section" hidden>
+        <section id="result-section" class="screen result-screen" hidden>
             <p>Letra de identidad</p>
 
             <div id="result-letter"></div>
@@ -40,7 +44,7 @@
             <button id="finish-button">Finalizar programa</button>
         </section>
 
-        <section id="finished-section" hidden>
+        <section id="finished-section" class="screen finished-screen" hidden>
             <h1>Programa finalizado.</h1>
             <p>El proceso de cálculo se ha cerrado correctamente.</p>
             <button id="restart-button">Volver a iniciar</button>

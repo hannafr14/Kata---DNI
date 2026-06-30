@@ -1,21 +1,22 @@
 button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
 
-  width: 380px;
-  height: 52px;
-  margin: 24px auto 0;
+  width: 100%;
+  max-width: 360px;
+  height: 48px;
+  margin: 0;
   border: 0;
   border-radius: 16px;
-  padding: 16px 24px;
+  padding: 14px 24px;
 
   font-size: 14px;
   font-weight: 600;
 
   color: #ffffff;
-  background-color: #3f5bea;
+  background-color: #263fb3;
   cursor: pointer;
 
   box-shadow: 0 10px 15px -3px rgba(47, 74, 203, 0.2),
@@ -25,5 +26,14 @@ button {
 }
 
 button:hover {
-  background-color: #263fb3;
+  background-color: #3f5bea;
+}
+
+button .material-symbols-outlined {
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+button:hover .material-symbols-outlined {
+  transform: translateX(4px);
 }
