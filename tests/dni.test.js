@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { calculateDniLetter } from "../src/dni.js";
+import { calculateDniLetter } from "../src/js/dni.js";
 
 describe("calculateDniLetter", () => {
     it("returns T when the number is 0", () => {

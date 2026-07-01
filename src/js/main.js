@@ -25,16 +25,25 @@ const resultDescription = document.querySelector("#result-description");
 const dniCounter = document.querySelector("#dni-counter");
 const inputWrapper = document.querySelector(".input-wrapper");
 
-function resetDniInput() {
-  dniInput.value = "";
-  dniCounter.textContent = "0/8";
+function showError() {
+  errorMessage.hidden = false;
+  inputWrapper.classList.add("is-error");
+}
+
+function hideError() {
   errorMessage.hidden = true;
   inputWrapper.classList.remove("is-error");
 }
 
+function resetDniInput() {
+  dniInput.value = "";
+  dniCounter.textContent = "0/8";
+  hideError();
+}
+
 startButton.addEventListener("click", () => {
-    introSection.hidden = true;
-    calculatorSection.hidden = false;
+  introSection.hidden = true;
+  calculatorSection.hidden = false;
 });
 
 backButton.addEventListener("click", () => {
@@ -65,17 +74,15 @@ calculateButton.addEventListener("click", () => {
   const letter = calculateDniLetter(dniNumber);
 
   if (letter === null) {
-    errorMessage.hidden = false;
-    inputWrapper.classList.add("is-error");
+    showError();
     return;
   }
 
-  errorMessage.hidden = true;
-  inputWrapper.classList.remove("is-error");
+  hideError();
 
   resultLetter.textContent = letter;
   resultDni.textContent = `${dniNumber} - ${letter}`;
-  resultDescription.textContent = `Calculada con el algoritmo oficial:\n${dniNumber} mod 23 -> ${letter}.`;
+  resultDescription.textContent = `Calculada con el algoritmo oficial:\n${dniNumber} mod 23 da como resultado ${letter}.`;
 
   calculatorSection.hidden = true;
   resultSection.hidden = false;
@@ -108,13 +115,11 @@ function validateDniInput() {
   dniCounter.textContent = `${dniValue.length}/8`;
 
   if (!hasOnlyNumbers || !hasValidLength) {
-    errorMessage.hidden = false;
-    inputWrapper.classList.add("is-error");
+    showError();
     return false;
   }
 
-  errorMessage.hidden = true;
-  inputWrapper.classList.remove("is-error");
+  hideError();
   return true;
 }
 
