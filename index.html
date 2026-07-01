@@ -20,16 +20,44 @@
         </section>
 
         <section id="calculator-section" class="screen calculator-screen" hidden>
-            <h1>Introduce tu DNI</h1>
-            <p>8 dígitos, sin la letra.</p>
+            <div class="calculator-header">
+                <button id="back-button" class="icon-button" type="button" aria-label="Volver">
+                    <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+                </button>
 
-            <label for="dni-input">Número</label>
-            <input id="dni-input" type="text" maxlength="8" placeholder="12345678">
+            </div>
 
-            <p id="error-message" hidden>El dato introducido es incorrecto</p>
+            <div class="calculator-card">
+                <h1>Introduce tu DNI</h1>
+                <p class="calculator-subtitle">8 dígitos, sin la letra.</p>
 
-            <button id="calculate-button">Calcular letra</button>
-            <button id="cancel-button">Cancelar proceso</button>
+                <label for="dni-input">Número</label>
+
+                <div class="input-wrapper">
+                <input id="dni-input" type="text" placeholder="12345678">
+                <span id="dni-counter">0/8</span>
+                </div>
+
+                <p id="error-message" hidden>
+                <span class="material-symbols-outlined" aria-hidden="true">error</span>
+                El dato introducido es incorrecto
+                </p>
+
+                <p class="privacy-message">
+                <span class="material-symbols-outlined" aria-hidden="true">lock</span>
+                Tus datos se procesan localmente, nada se envía a internet.
+                </p>
+
+                <button id="calculate-button">
+                Calcular letra
+                <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                </button>
+            </div>
+
+            <button id="cancel-button" class="text-button">
+                <span class="material-symbols-outlined" aria-hidden="true">close</span>
+                Cancelar proceso
+            </button>
         </section>
 
         <section id="result-section" class="screen result-screen" hidden>

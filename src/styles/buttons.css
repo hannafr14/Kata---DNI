@@ -22,7 +22,7 @@ button {
   box-shadow: 0 10px 15px -3px rgba(47, 74, 203, 0.2),
     0 4px 6px -4px rgba(47, 74, 203, 0.2);
 
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 button:hover {

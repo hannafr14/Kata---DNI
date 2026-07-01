@@ -1,0 +1,149 @@
+.calculator-screen {
+  width: min(430px, 100%);
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.calculator-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  min-height: 40px;
+}
+
+.calculator-card {
+  background: #ffffff;
+  border: 1px solid #e1e5ee;
+  border-radius: 24px;
+  padding: 40px;
+  text-align: left;
+  box-shadow: 0 20px 50px rgba(20, 30, 60, 0.08);
+}
+
+.calculator-subtitle {
+  margin-top: 4px;
+}
+
+.calculator-card > label {
+  display: block;
+  margin-top: 24px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #4f5668;
+}
+
+.calculator-card input {
+  width: 100%;
+  border: 1px solid #e1e5ee;
+  border-radius: 18px;
+  padding: 16px 80px 16px 16px;
+  font-size: 24px;
+  color: #151827;
+  background-color: #f3f5ff;
+  outline: none;
+  letter-spacing: 6px;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.calculator-card input::placeholder {
+  color: #a5abba;
+}
+
+.calculator-card input:focus {
+  border-color: #2f4acb;
+  box-shadow: 0 0 0 3px rgba(47, 74, 203, 0.12);
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+#dni-counter {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #4f5668;
+  background-color: #f3f5ff;
+  padding-left: 8px;
+}
+
+.privacy-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+#error-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  color: #e01f2d;
+}
+
+.input-wrapper.is-error input {
+  border-color: #e01f2d;
+  box-shadow: 0 0 0 3px rgba(224, 31, 45, 0.12);
+}
+
+.text-button,
+.icon-button {
+  width: auto;
+  max-width: none;
+  height: auto;
+  background: transparent;
+  box-shadow: none;
+}
+
+.icon-button {
+  color: #151827;
+}
+
+.icon-button:hover,
+.icon-button:active {
+  background: transparent;
+  color: #151827;
+}
+
+.icon-button .material-symbols-outlined {
+  font-size: 32px;
+  transition: color 0.2s ease;
+}
+
+.icon-button:hover .material-symbols-outlined,
+.icon-button:active .material-symbols-outlined {
+  transform: none;
+  color: #263fb3;
+}
+
+.text-button {
+  color: #4f5668;
+}
+
+.text-button,
+.text-button .material-symbols-outlined {
+  transition: color 0.2s ease;
+}
+
+.text-button:hover,
+.text-button:active {
+  background: transparent;
+  color: #e01f2d;
+}
+
+.text-button:hover .material-symbols-outlined,
+.text-button:active .material-symbols-outlined {
+  transform: none;
+  color: #e01f2d;
+}
