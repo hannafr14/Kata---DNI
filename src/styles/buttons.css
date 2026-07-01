@@ -37,3 +37,54 @@ button .material-symbols-outlined {
 button:hover .material-symbols-outlined {
   transform: translateX(4px);
 }
+
+.text-button,
+.icon-button {
+  width: auto;
+  max-width: none;
+  height: auto;
+  background: transparent;
+  box-shadow: none;
+}
+
+.icon-button {
+  color: #151827;
+}
+
+.icon-button:hover,
+.icon-button:active {
+  background: transparent;
+  color: #151827;
+}
+
+.icon-button .material-symbols-outlined {
+  font-size: 32px;
+  transition: color 0.2s ease;
+}
+
+.icon-button:hover .material-symbols-outlined,
+.icon-button:active .material-symbols-outlined {
+  transform: none;
+  color: #263fb3;
+}
+
+.text-button {
+  color: #4f5668;
+}
+
+.text-button,
+.text-button .material-symbols-outlined {
+  transition: color 0.2s ease;
+}
+
+.text-button:hover,
+.text-button:active {
+  background: transparent;
+  color: #e01f2d;
+}
+
+.text-button:hover .material-symbols-outlined,
+.text-button:active .material-symbols-outlined {
+  transform: none;
+  color: #e01f2d;
+}
