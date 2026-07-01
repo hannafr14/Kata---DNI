@@ -31,6 +31,14 @@ describe("calculateDniLetter", () => {
     });
 
     it("returns R when the number is 99999999", () => {
-        expect(calculateDniLetter("99999999")).toBe("R")
+        expect(calculateDniLetter("99999999")).toBe("R");
+    });
+
+    it("returns Z when the number is 12345678", () => {
+        expect(calculateDniLetter("12345678")).toBe("Z");
+    });
+
+    it("returns null when the value is negative", () => {
+        expect(calculateDniLetter("-123")).toBe(null);
     });
 });
