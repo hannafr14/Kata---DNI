@@ -61,17 +61,31 @@
         </section>
 
         <section id="result-section" class="screen result-screen" hidden>
-            <p>Letra de identidad</p>
+            <div class="result-header">
+                <button id="result-back-button" class="icon-button" type="button" aria-label="Volver">
+                    <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+                </button>
+            </div>
 
-            <div id="result-letter"></div>
+            <div class="result-card">
+                <p class="result-label">Letra de identidad</p>
 
-            <p id="result-dni"></p>
-            <p id="result-description"></p>
+                <div id="result-letter"></div>
 
-            <button id="new-calculation-button">Nuevo cálculo</button>
-            <button id="finish-button">Finalizar programa</button>
+                <p id="result-dni"></p>
+                <p id="result-description"></p>
+
+                <button id="new-calculation-button">
+                    <span class="material-symbols-outlined" aria-hidden="true">refresh</span>
+                    Nuevo cálculo
+                </button>
+            </div>
+
+            <button id="finish-button" class="text-button">
+                <span class="material-symbols-outlined" aria-hidden="true">close</span>
+                Finalizar programa
+            </button>
         </section>
-
         <section id="finished-section" class="screen finished-screen" hidden>
             <h1>Programa finalizado.</h1>
             <p>El proceso de cálculo se ha cerrado correctamente.</p>

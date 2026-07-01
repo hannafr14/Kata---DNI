@@ -10,6 +10,7 @@ const newCalculationButton = document.querySelector("#new-calculation-button");
 const finishButton = document.querySelector("#finish-button");
 const restartButton = document.querySelector("#restart-button");
 const backButton = document.querySelector("#back-button");
+const resultBackButton = document.querySelector("#result-back-button");
 
 const resultSection = document.querySelector("#result-section");
 
@@ -43,6 +44,11 @@ backButton.addEventListener("click", () => {
   resetDniInput();
 });
 
+resultBackButton.addEventListener("click", () => {
+  resultSection.hidden = true;
+  calculatorSection.hidden = false;
+});
+
 cancelButton.addEventListener("click", () => {
   calculatorSection.hidden = true;
   finishedSection.hidden = false;
@@ -69,7 +75,7 @@ calculateButton.addEventListener("click", () => {
 
   resultLetter.textContent = letter;
   resultDni.textContent = `${dniNumber} - ${letter}`;
-  resultDescription.textContent = `Calculada con el algoritmo oficial: ${dniNumber} mod 23 -> ${letter}.`;
+  resultDescription.textContent = `Calculada con el algoritmo oficial:\n${dniNumber} mod 23 -> ${letter}.`;
 
   calculatorSection.hidden = true;
   resultSection.hidden = false;
